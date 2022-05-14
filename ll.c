@@ -32,12 +32,16 @@ void append(Node** head, int value)
 
 void traverse(Node* head)
 {
-    while(head != NULL)
-    {
-        printf("%d ",head->data);
-        head = head->next;
+    struct node *temp;
+    if(head==NULL){
+        printf("List is empty");
+        return;
     }
-    printf("\n");
+    temp=head;
+    while(temp!=NULL){
+        print("%d\n",temp->data);
+        temp=temp->next;
+    }
 }
 
 void insert_at_begin(Node** head , int value)
